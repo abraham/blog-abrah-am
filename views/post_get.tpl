@@ -7,7 +7,7 @@
                 <a href="#!" class="waves-effect waves-teal btn-flat">#{{label}}</a>
             % end
             {{post['from_now']}}
-            <div class='post-gplus right'><div class="g-plusone" data-annotation="inline" data-width="250" data-href="http://gogole.com"></div></div>
+            <div class='post-gplus right'><div class="g-plusone" data-annotation="inline" data-width="250"></div></div>
         </div>
         <br>
         <div>
