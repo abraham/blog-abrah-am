@@ -51,11 +51,9 @@ def find_image(content):
     image = False
     soup = BeautifulSoup(content)
     for img in soup.find_all('img'):
-        if img.get('width', 0) > 300:
+        if not image:
             image = {
-                'url': img.get('src'),
-                'width': img.get('width'),
-                'height': img.get('height'),
+                'url': img.get('src')
             }
         del img['width']
         del img['height']
