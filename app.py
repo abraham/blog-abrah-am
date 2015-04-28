@@ -6,7 +6,7 @@ from momentpy import from_now
 from datetime import datetime
 
 
-DEBUG = os.environ['DEBUG']
+DEBUG = os.environ['DEBUG'] == 'True'
 HOST = os.environ['HOST']
 PORT = os.environ['PORT']
 BLOG_ID = os.environ['BLOG_ID']
