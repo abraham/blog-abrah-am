@@ -25,6 +25,7 @@ def mutate_post(post):
     post['content'], post['img'] = find_image(post['content'])
     post['summary'] = find_summary(post['content'])
     post['from_now'] = from_now_date(post['published'])
+    post['content'] = wrap_frames(post['content'])
 
 
 def from_now_date(published):
@@ -36,6 +37,14 @@ def find_summary(content):
     for string in soup.stripped_strings:
         if len(string) > 10:
             return string
+
+
+def wrap_frames(content):
+    soup = BeautifulSoup(content)
+    for frame in soup.find_all('iframe'):
+        frame = frame.wrap(soup.new_tag("div"))
+        frame['class'] = "video-container"
+    return str(soup)
 
 
 def find_image(content):
