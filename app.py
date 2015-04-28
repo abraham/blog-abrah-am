@@ -67,7 +67,7 @@ def update_blog_link(url):
 
 def list_posts():
     service = build('blogger', 'v3', developerKey=API_KEY)
-    result = service.posts().list(blogId=BLOG_ID, maxResults=50).execute()
+    result = service.posts().list(blogId=BLOG_ID, maxResults=MAX_RESULTS_COUNT).execute()
     for post in result.get('items', []):
         mutate_post(post)
     return result
