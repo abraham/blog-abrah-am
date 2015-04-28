@@ -1,0 +1,4 @@
+google-api-python-client==1.4.0
+bottle==0.12.8
+beautifulsoup4==4.3.2
+momentpy==0.6.3
