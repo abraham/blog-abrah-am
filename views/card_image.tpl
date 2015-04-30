@@ -5,7 +5,7 @@
     </div>
     % if post['summary']:
         <div class="card-content">
-            <p>{{post['summary']}}</p>
+            <p class="truncate">{{post['summary']}}</p>
         </div>
     % end
 </div>
