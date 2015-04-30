@@ -24,6 +24,10 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
         <style type="text/css">
+            #posts {
+                margin-top: 15px;
+            }
+
             .card {
                 cursor: pointer;
             }
@@ -50,6 +54,7 @@
     </head>
 
     <body>
+        <div class="navbar-fixed">
         <nav class="light-blue darken-1" role="navigation">
             <div class="nav-wrapper container">
                 <a id="logo-container" href="/" class="brand-logo">Blog</a>
@@ -62,11 +67,10 @@
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a> -->
             </div>
-          </nav>
-
-        <div class='containerx'>
-            {{!base}}
+        </nav>
         </div>
+
+        {{!base}}
 
         <footer class="page-footer light-blue darken-1">
             <div class="container">

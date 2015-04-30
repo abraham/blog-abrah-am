@@ -1,4 +1,4 @@
-<div class="post col s12 m6 l3" data-url="{{post['url']}}">
+<div class="post col s12 m6 l4" data-url="{{post['url']}}">
     % if post['img']:
         % include('card_image.tpl', post=post)
     % else:
