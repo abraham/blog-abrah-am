@@ -1,4 +1,4 @@
-% rebase('base.tpl', title='The blog of Abraham Williams')
+% rebase('base.tpl', title='The blog of Abraham Williams', sidebar=sidebar)
 
 <div class="container">
     <div id="posts" class="row masonry">

@@ -70,15 +70,22 @@
         <div class="navbar-fixedx">
         <nav class="light-blue darken-1" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="/" class="brand-logo">Blog</a>
-                <ul class="right hide-on-med-and-down">
+                <a id="logo-container" href="/" class="brand-logo center">Blog</a>
+                <ul class="right hide-on-small-only">
                     <li><a href="https://abrah.am">Abraham Williams</a></li>
                 </ul>
 
-                <!-- <ul id="nav-mobile" class="side-nav">
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="/">Blog</a></li>
                     <li><a href="https://abrah.am">Abraham Williams</a></li>
+                    % if defined('sidebar'):
+                        <li class="divider"></li>
+                        % for link in sidebar:
+                            <li><a href="{{sidebar[link]['href']}}">{{sidebar[link]['text']}}</a></li>
+                        % end
+                    % end
                 </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a> -->
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>
         </nav>
         </div>

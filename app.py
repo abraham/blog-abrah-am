@@ -79,6 +79,18 @@ def list_posts(label=None):
     return result
 
 
+def build_sidebar_links(posts):
+    links = {}
+    for post in posts:
+        for label in post.get('labels', []):
+            links['#' + label] = {
+                'text': '#' + label,
+                'href': '/search/label/' + label,
+            }
+    print links
+    return links
+
+
 def get_post(path):
     service = build('blogger', 'v3', developerKey=API_KEY)
     post = service.posts().getByPath(blogId=BLOG_ID, path=path).execute()
@@ -90,14 +102,16 @@ def get_post(path):
 def index():
     result = list_posts()
     posts = result.get('items', [])
-    return template('list.tpl', posts=posts)
+    sidebar = build_sidebar_links(posts=posts)
+    return template('list.tpl', posts=posts, sidebar=sidebar)
 
 
 @get('/search/label/<label>')
 def index(label):
     result = list_posts(label=label)
     posts = result.get('items', [])
-    return template('list.tpl', posts=posts)
+    sidebar = build_sidebar_links(posts=posts)
+    return template('list.tpl', posts=posts, sidebar=sidebar)
 
 
 @get('/<year>/<month>/<title>')
