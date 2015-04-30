@@ -91,6 +91,7 @@
 
         <script>
             // TODO: move to file
+            var $container;
             var debounce = function (func, threshold, execAsap) {
                   var timeout;
 
@@ -113,17 +114,19 @@
             function layout() {
                 $container.isotope('layout');
             }
-
-            $(".button-collapse").sideNav();
-            var $container = $('.masonry');
-            $container.isotope({
-                itemSelector: '.post',
-                layoutMode: 'masonry'
+            $(document).ready(function(){
+                $(".button-collapse").sideNav();
+                $container = $('.masonry');
+                $container.isotope({
+                    itemSelector: '.post',
+                    layoutMode: 'masonry'
+                });
+                $('.card').click(function() {
+                    window.location = $(this).closest('.post').data('url');
+                });
+                $("img").bind('load', debounce(layout));
+                $('.parallax').parallax();
             });
-            $('.card').click(function() {
-                window.location = $(this).closest('.post').data('url');
-            });
-            $("img").bind('load', debounce(layout));
         </script>
     </body>
 </html>

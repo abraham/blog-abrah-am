@@ -1,4 +1,10 @@
 % rebase('base.tpl', title=post['title'])
+% if post['img']:
+<div class="parallax-container">
+    <div class="parallax"><img src="{{post['img']['url']}}"></div>
+</div>
+% end
+
 <div class="row">
     <div class="post col s8 m8 l8 offset-s2 offset-m2 offset-l2" data-url="{{post['url']}}">
         <h2 class="header">{{post['title']}}</h2>
