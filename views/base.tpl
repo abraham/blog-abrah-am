@@ -2,10 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta name="theme-color" content="#039be5">
         <link rel="icon" sizes="192x192" href="https://abrah.am/img/logo-192.jpg">
+
+        <title>{{title}}</title>
 
         <link rel="shortcut icon" href="https://abrah.am/favicon.ico">
         <link type="text/plain" rel="author" href="https://abrah.am/humans.txt" />
@@ -13,8 +14,7 @@
         <link rel='author' href='https://plus.google.com/+abrahamwilliams' />
 
 
-        <title>{{title}}</title>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
         <style type="text/css">
             .card {
                 cursor: pointer;
@@ -29,6 +29,7 @@
                 margin-top: 5px;
             }
         </style>
+
     </head>
 
     <body>
