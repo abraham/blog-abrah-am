@@ -73,7 +73,7 @@
                 <div class="row">
                     <div class="col l6 s12">
                         <h5 class="white-text">Abraham Williams</h5>
-                        <p class="grey-text text-lighten-4">When not dashing out code at Addvocate, this professional bearder can usually be found baking fresh bread or in the boxing ring. Currently living in the Bay Area but it's even-keeled weather doesn't live up to the Maine crisp coast and snow-capped fir trees.</p>
+                        <p class="grey-text text-lighten-4">When not dashing out code at <a href="http://bendyworks.com" class="white-text">Bendyworks</a>, this professional bearder can usually be found baking fresh bread or in the boxing ring. Currently residing in Madison, WI consuming deep fried cheese curds and enjoying Midwest hospitality.</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>
