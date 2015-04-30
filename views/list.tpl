@@ -5,5 +5,11 @@
     % for post in posts:
         % include('post_list.tpl', post=post)
     % end
+
+    % if not posts:
+        <div class="valign-wrapper nothing center center-align">
+            <h5 class="valign center-align">No posts found :-/</h5>
+        </div>
+    % end
     </div>
 </div>

@@ -26,6 +26,7 @@
         <style type="text/css">
             #posts {
                 margin-top: 15px;
+                min-height: 400px;
             }
 
             .card {
@@ -49,12 +50,24 @@
             .parallax-container {
                 height: 400px;
             }
+
+            .main {
+                min-height: 400px;
+            }
+
+            .nothing {
+                min-height: 400px;
+            }
+
+            .nothing h5 {
+                width: 100%;
+            }
         </style>
 
     </head>
 
     <body>
-        <div class="navbar-fixed">
+        <div class="navbar-fixedx">
         <nav class="light-blue darken-1" role="navigation">
             <div class="nav-wrapper container">
                 <a id="logo-container" href="/" class="brand-logo">Blog</a>
@@ -70,7 +83,9 @@
         </nav>
         </div>
 
-        {{!base}}
+        <div class="main">
+            {{!base}}
+        </div>
 
         <footer class="page-footer light-blue darken-1">
             <div class="container">

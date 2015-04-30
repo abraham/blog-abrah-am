@@ -65,9 +65,15 @@ def update_blog_link(url):
     return url.replace(OLD_BLOG_URL, NEW_BLOG_URL)
 
 
-def list_posts():
+def list_posts(label=None):
     service = build('blogger', 'v3', developerKey=API_KEY)
-    result = service.posts().list(blogId=BLOG_ID, maxResults=MAX_RESULTS_COUNT).execute()
+    options = {
+        'blogId': BLOG_ID,
+        'maxResults': MAX_RESULTS_COUNT,
+    }
+    if label:
+        options['labels'] = label
+    result = service.posts().list(**options).execute()
     for post in result.get('items', []):
         mutate_post(post)
     return result
@@ -83,6 +89,13 @@ def get_post(path):
 @get('/')
 def index():
     result = list_posts()
+    posts = result.get('items', [])
+    return template('list.tpl', posts=posts)
+
+
+@get('/search/label/<label>')
+def index(label):
+    result = list_posts(label=label)
     posts = result.get('items', [])
     return template('list.tpl', posts=posts)
 
