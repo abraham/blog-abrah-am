@@ -5,7 +5,7 @@
 </div>
 % end
 
-<div class="row">
+<div class="row white">
     <div class="post col s8 m8 l8 offset-s2 offset-m2 offset-l2" data-url="{{post['url']}}">
         <h2 class="header">{{post['title']}}</h2>
         <div>

@@ -36,6 +36,11 @@
             .post-gplus {
                 margin-top: 5px;
             }
+
+            .header {
+                color: #039be5;
+                font-weight: 300;
+            }
         </style>
 
     </head>
