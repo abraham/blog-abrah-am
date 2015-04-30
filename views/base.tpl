@@ -41,6 +41,10 @@
                 color: #039be5;
                 font-weight: 300;
             }
+
+            .parallax-container {
+                height: 400px;
+            }
         </style>
 
     </head>
