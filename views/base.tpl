@@ -13,6 +13,13 @@
         <link rel='me' href='https://plus.google.com/+abrahamwilliams' />
         <link rel='author' href='https://plus.google.com/+abrahamwilliams' />
 
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+        <link rel="dns-prefetch" href="https://apis.google.com/">
+        <link rel="dns-prefetch" href="https://1.bp.blogspot.com/">
+        <link rel="dns-prefetch" href="https://2.bp.blogspot.com/">
+        <link rel="dns-prefetch" href="https://3.bp.blogspot.com/">
+        <link rel="dns-prefetch" href="https://4.bp.blogspot.com/">
+        <link rel="dns-prefetch" href="https://accounts.google.com/">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
         <style type="text/css">
