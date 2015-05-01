@@ -77,27 +77,27 @@
     </head>
 
     <body>
-        <header class="navbar-fixedx">
-        <nav class="light-blue darken-1" role="navigation">
-            <div class="nav-wrapper container">
-                <a id="logo-container" href="/" class="brand-logo center">Blog</a>
-                <ul class="right hide-on-small-only">
-                    <li><a href="https://abrah.am">Abraham Williams</a></li>
-                </ul>
+        <header class="navbar-fixed">
+            <nav class="light-blue darken-1" role="navigation">
+                <div class="nav-wrapper container">
+                    <a id="logo-container" href="/" class="brand-logo center">Blog</a>
+                    <ul class="right hide-on-small-only">
+                        <li><a href="https://abrah.am">Abraham Williams</a></li>
+                    </ul>
 
-                <ul id="nav-mobile" class="side-nav fixed">
-                    <li><a href="/">Blog</a></li>
-                    <li><a href="https://abrah.am">Abraham Williams</a></li>
-                    % if defined('sidebar'):
-                        <li class="divider"></li>
-                        % for link in sidebar:
-                            <li><a href="{{link['href']}}">{{link['text']}}</a></li>
+                    <ul id="nav-mobile" class="side-nav fixed">
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="https://abrah.am">Abraham Williams</a></li>
+                        % if defined('sidebar'):
+                            <li class="divider"></li>
+                            % for link in sidebar:
+                                <li><a href="{{link['href']}}">{{link['text']}}</a></li>
+                            % end
                         % end
-                    % end
-                </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-            </div>
-        </nav>
+                    </ul>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                </div>
+            </nav>
         </header>
 
         <main class="main">
