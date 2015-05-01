@@ -12,7 +12,9 @@
             <h2 class="header">{{post['title']}}</h2>
             <div>
                 % for label in post.get('labels', []):
+                <span class="hide-on-med-and-down">
                     <a href="/search/label/{{label}}" class="waves-effect waves-teal btn-flat">#{{label}}</a>
+                </span>
                 % end
                 <a href="{{post['url']}}" class="waves-effect waves-teal btn-flat">{{post['from_now']}}</a>
                 
