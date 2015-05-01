@@ -62,12 +62,22 @@
             .nothing h5 {
                 width: 100%;
             }
+
+            header, main, footer {
+                padding-left: 240px;
+            }
+
+            @media only screen and (max-width : 992px) {
+                header, main, footer {
+                    padding-left: 0;
+                }
+            }
         </style>
 
     </head>
 
     <body>
-        <div class="navbar-fixedx">
+        <header class="navbar-fixedx">
         <nav class="light-blue darken-1" role="navigation">
             <div class="nav-wrapper container">
                 <a id="logo-container" href="/" class="brand-logo center">Blog</a>
@@ -75,24 +85,24 @@
                     <li><a href="https://abrah.am">Abraham Williams</a></li>
                 </ul>
 
-                <ul id="nav-mobile" class="side-nav">
+                <ul id="nav-mobile" class="side-nav fixed">
                     <li><a href="/">Blog</a></li>
                     <li><a href="https://abrah.am">Abraham Williams</a></li>
                     % if defined('sidebar'):
                         <li class="divider"></li>
                         % for link in sidebar:
-                            <li><a href="{{sidebar[link]['href']}}">{{sidebar[link]['text']}}</a></li>
+                            <li><a href="{{link['href']}}">{{link['text']}}</a></li>
                         % end
                     % end
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>
         </nav>
-        </div>
+        </header>
 
-        <div class="main">
+        <main class="main">
             {{!base}}
-        </div>
+        </main>
 
         <footer class="page-footer light-blue darken-1">
             <div class="container">

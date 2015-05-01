@@ -80,15 +80,18 @@ def list_posts(label=None):
 
 
 def build_sidebar_links(posts):
-    links = {}
+    existing = []
+    links = []
     for post in posts:
         for label in post.get('labels', []):
-            links['#' + label] = {
-                'text': '#' + label,
-                'href': '/search/label/' + label,
-            }
-    print links
-    return links
+            label = label.lower()
+            if label not in existing:
+                existing.append(label)
+                links.append({
+                    'text': '#' + label,
+                    'href': '/search/label/' + label,
+                })
+    return sorted(links, key=lambda k: k['text'])
 
 
 def get_post(path):
