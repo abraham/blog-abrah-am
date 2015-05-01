@@ -63,12 +63,12 @@
                 width: 100%;
             }
 
-            header, main, footer {
+            main, footer {
                 padding-left: 240px;
             }
 
             @media only screen and (max-width : 992px) {
-                header, main, footer {
+                main, footer {
                     padding-left: 0;
                 }
             }
