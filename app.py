@@ -83,14 +83,29 @@ def build_sidebar_links(posts):
     existing = []
     links = []
     for post in posts:
-        for label in post.get('labels', []):
-            label = label.lower()
-            if label not in existing:
-                existing.append(label)
-                links.append({
-                    'text': '#' + label,
-                    'href': '/search/label/' + label,
-                })
+        build_label(existing, links, post)
+    return sort_sidebar_links(links)
+
+
+def build_sidebar_links_post(post):
+    existing = []
+    links = []
+    build_label(existing, links, post)
+    return sort_sidebar_links(links)
+
+
+def build_label(existing, links, post):
+    for label in post.get('labels', []):
+        label = label.lower()
+        if label not in existing:
+            existing.append(label)
+            links.append({
+                'text': '#' + label,
+                'href': '/search/label/' + label,
+            })
+
+
+def sort_sidebar_links(links):
     return sorted(links, key=lambda k: k['text'])
 
 
@@ -120,7 +135,8 @@ def index(label):
 @get('/<year>/<month>/<title>')
 def post(year, month, title):
     result = get_post(request.path)
-    return template('post_get.tpl', post=result)
+    sidebar = build_sidebar_links_post(post=result)
+    return template('post_get.tpl', post=result, sidebar=sidebar)
 
 
 run(host=HOST, port=PORT, debug=DEBUG, reloader=DEBUG)
