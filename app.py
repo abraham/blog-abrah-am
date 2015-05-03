@@ -1,5 +1,5 @@
 import os
-from bottle import get, run, template, view, request
+from bottle import get, run, template, view, request, response
 from apiclient.discovery import build
 from bs4 import BeautifulSoup
 from momentpy import from_now
@@ -122,6 +122,15 @@ def index():
     posts = result.get('items', [])
     sidebar = build_sidebar_links(posts=posts)
     return template('list.tpl', posts=posts, sidebar=sidebar)
+
+
+@get('/robots.txt')
+def index():
+    response.content_type = 'text/plain'
+    robot = """User-agent: *
+Disallow: /
+    """
+    return robot
 
 
 @get('/search/label/<label>')
