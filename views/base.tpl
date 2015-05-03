@@ -86,7 +86,7 @@
                     </ul>
 
                     <ul id="nav-mobile" class="side-nav fixed">
-                        <li><a href="/">Blog</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="https://abrah.am">Abraham Williams</a></li>
                         % if defined('sidebar'):
                             <li class="divider"></li>
